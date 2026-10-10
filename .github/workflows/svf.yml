@@ -1,0 +1,11 @@
+name: svf
+on: workflow_dispatch
+jobs:
+  a:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ok > a.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: svf-art
+          path: a.txt
